@@ -30,12 +30,16 @@ import lombok.RequiredArgsConstructor;
 public class QuestionController {
 
 	private final QuestionService questionService; 
-	private final UserService userService; // 유저 서비스 생성
+	private final UserService userService;
 	
 	@GetMapping("/list")
-	public String list(Model model, @RequestParam(value="page", defaultValue="0") int page) {
-		Page<Question> paging = this.questionService.getList(page); 
+	// 검색어에 해당하는 kw 파라미터를 추가했고 디폴트값으로 빈 문자열을 설정
+	public String list(Model model, @RequestParam(value="page", defaultValue="0") int page, @RequestParam(value="kw", defaultValue="") String kw) {
+		Page<Question> paging = this.questionService.getList(page, kw); 
 		model.addAttribute("paging", paging);
+		
+		// 화면에서 입력한 검색어를 화면에 유지하기 위해 model.addAttribute("kw", kw)로 kw 값을 저장
+		model.addAttribute("kw", kw);
 		return "question_list";
 	}
 	
@@ -54,15 +58,11 @@ public class QuestionController {
 	 
 	 @PreAuthorize("isAuthenticated()")
 	 @PostMapping("/create")
-	 // Principal 객체 추가
 	 public String questionCreate(@Valid QuestionForm questionForm, BindingResult bindingResult, Principal principal) {
 		 if (bindingResult.hasErrors()) {
 	            return "question_form";
 	        }
-		 
-		 	// 유저서비스의 getUser 메소드를 통해 사용자 정보를 저장
 		 	SiteUser siteUser = this.userService.getUser(principal.getName());
-		 	// 매개변수에 siteUser속성 추가
 	        this.questionService.create(questionForm.getSubject(), questionForm.getContent(), siteUser);
 	        return "redirect:/question/list";
 	}
