@@ -73,6 +73,7 @@ public class QuestionService {
 		question.getVoter().add(siteUser);
 		this.questionRepository.save(question);
 	}
+	
 	private Specification<Question> search(String kw) {
 		
         return new Specification<>() {
