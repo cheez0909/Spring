@@ -4251,3 +4251,179 @@ java.lang.NumberFormatException: Cannot parse null string
 	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1152)
 	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:51)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SESSION 2023-10-24 19:21:06.687 -----------------------------------------------
+eclipse.buildId=4.28.0.20230608-1200
+java.version=17.0.8.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.jface 2 0 2023-10-24 19:21:53.146
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-10-24 19:21:53.146
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2023-10-24 19:22:05.982
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Dani'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2023-10-24 19:22:06.120
+!MESSAGE Removing PartDescriptorImpl with the "org.eclipse.pde.api.tools.ui.views.apitooling.views.apitoolingview" id and the "API Tools" label.It points to the non available "bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" class. Bundle might have been uninstalled
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2023-10-24 19:22:06.122
+!MESSAGE Removing PartDescriptorImpl with the "org.eclipse.pde.runtime.RegistryBrowser" id and the "Plug-in Registry" label.It points to the non available "bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" class. Bundle might have been uninstalled
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2023-10-24 19:22:06.125
+!MESSAGE Removing PartDescriptorImpl with the "org.eclipse.pde.ui.PluginsView" id and the "Plug-ins" label.It points to the non available "bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" class. Bundle might have been uninstalled
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2023-10-24 19:22:06.127
+!MESSAGE Removing PartDescriptorImpl with the "org.eclipse.pde.ui.FeaturesView" id and the "Features" label.It points to the non available "bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" class. Bundle might have been uninstalled
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2023-10-24 19:22:06.130
+!MESSAGE Removing PartDescriptorImpl with the "org.eclipse.pde.ui.DependenciesView" id and the "Plug-in Dependencies" label.It points to the non available "bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" class. Bundle might have been uninstalled
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2023-10-24 19:22:06.132
+!MESSAGE Removing PartDescriptorImpl with the "org.eclipse.pde.ui.TargetPlatformState" id and the "Target Platform State" label.It points to the non available "bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" class. Bundle might have been uninstalled
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2023-10-24 19:22:06.134
+!MESSAGE Removing PartDescriptorImpl with the "org.eclipse.pde.ui.ImageBrowserView" id and the "Plug-in Image Browser" label.It points to the non available "bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" class. Bundle might have been uninstalled
+
+!ENTRY org.eclipse.egit.core 2 0 2023-10-24 19:22:06.161
+!MESSAGE Cannot clean up internal hidden project
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException(C:/SpringBoot/.metadata/.plugins/org.eclipse.core.resources/.projects/.org.eclipse.egit.core.cmp/25.tree)[568]: java.io.FileNotFoundException: C:\SpringBoot\.metadata\.plugins\org.eclipse.core.resources\.projects\.org.eclipse.egit.core.cmp\25.tree (지정된 경로를 찾을 수 없습니다)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:293)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:235)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:184)
+	at org.eclipse.core.internal.localstore.SafeFileOutputStream.<init>(SafeFileOutputStream.java:55)
+	at org.eclipse.core.internal.resources.SaveManager.writeTree(SaveManager.java:2154)
+	at org.eclipse.core.internal.resources.SaveManager.restoreMetaInfo(SaveManager.java:915)
+	at org.eclipse.core.internal.resources.SaveManager.restore(SaveManager.java:769)
+	at org.eclipse.core.internal.resources.Project.open(Project.java:1067)
+	at org.eclipse.core.internal.resources.Project.open(Project.java:1150)
+	at org.eclipse.egit.core.internal.efs.HiddenResources.openProject(HiddenResources.java:321)
+	at org.eclipse.egit.core.internal.efs.HiddenResources.getHiddenProject(HiddenResources.java:274)
+	at org.eclipse.egit.core.internal.efs.HiddenResources.initialize(HiddenResources.java:127)
+	at org.eclipse.core.runtime.jobs.Job$2.run(Job.java:187)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.core.resources 4 568 2023-10-24 19:22:06.165
+!MESSAGE Could not write metadata for '/.org.eclipse.egit.core.cmp'.
+!STACK 0
+java.io.FileNotFoundException: C:\SpringBoot\.metadata\.plugins\org.eclipse.core.resources\.projects\.org.eclipse.egit.core.cmp\25.tree (지정된 경로를 찾을 수 없습니다)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:293)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:235)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:184)
+	at org.eclipse.core.internal.localstore.SafeFileOutputStream.<init>(SafeFileOutputStream.java:55)
+	at org.eclipse.core.internal.resources.SaveManager.writeTree(SaveManager.java:2154)
+	at org.eclipse.core.internal.resources.SaveManager.restoreMetaInfo(SaveManager.java:915)
+	at org.eclipse.core.internal.resources.SaveManager.restore(SaveManager.java:769)
+	at org.eclipse.core.internal.resources.Project.open(Project.java:1067)
+	at org.eclipse.core.internal.resources.Project.open(Project.java:1150)
+	at org.eclipse.egit.core.internal.efs.HiddenResources.openProject(HiddenResources.java:321)
+	at org.eclipse.egit.core.internal.efs.HiddenResources.getHiddenProject(HiddenResources.java:274)
+	at org.eclipse.egit.core.internal.efs.HiddenResources.initialize(HiddenResources.java:127)
+	at org.eclipse.core.runtime.jobs.Job$2.run(Job.java:187)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2023-10-24 19:22:06.184
+!MESSAGE Removing PartDescriptorImpl with the "org.jkiss.dbeaver.core.queryManager" id and the "쿼리 관리자" label.It points to the non available "bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" class. Bundle might have been uninstalled
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2023-10-24 19:22:06.186
+!MESSAGE Removing PartDescriptorImpl with the "org.jkiss.dbeaver.core.shellProcess" id and the "프로세스" label.It points to the non available "bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" class. Bundle might have been uninstalled
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2023-10-24 19:22:06.188
+!MESSAGE Removing PartDescriptorImpl with the "org.jkiss.dbeaver.tasks" id and the "Database Tasks" label.It points to the non available "bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" class. Bundle might have been uninstalled
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2023-10-24 19:22:06.190
+!MESSAGE Removing PartDescriptorImpl with the "org.jkiss.dbeaver.ui.dashboardView" id and the "Database Dashboard" label.It points to the non available "bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" class. Bundle might have been uninstalled
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2023-10-24 19:22:06.192
+!MESSAGE Removing PartDescriptorImpl with the "org.jkiss.dbeaver.core.databaseNavigator" id and the "Database Navigator" label.It points to the non available "bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" class. Bundle might have been uninstalled
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2023-10-24 19:22:06.195
+!MESSAGE Removing PartDescriptorImpl with the "org.jkiss.dbeaver.core.databaseBrowser" id and the "Database Browser" label.It points to the non available "bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" class. Bundle might have been uninstalled
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2023-10-24 19:22:06.197
+!MESSAGE Removing PartDescriptorImpl with the "org.jkiss.dbeaver.core.projectNavigator" id and the "프로젝트" label.It points to the non available "bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" class. Bundle might have been uninstalled
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2023-10-24 19:22:06.199
+!MESSAGE Removing PartDescriptorImpl with the "org.jkiss.dbeaver.core.projectExplorer" id and the "프로젝트 탐색기" label.It points to the non available "bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" class. Bundle might have been uninstalled
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-10-24 19:22:09.963
+!MESSAGE Boot project ADDED: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-10-24 19:22:09.967
+!MESSAGE Starting Boot LS...
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-10-24 19:22:09.984
+!MESSAGE Started Boot LS process
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-10-24 19:22:10.125
+!MESSAGE Command list starting LS: org.springframework.tooling.boot.ls
+START:
+C:\Users\Dani\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.8.v20230831-1047\jre\bin\javaw.exe
+-cp
+C:\Users\Dani\eclipse\java-2023-06\eclipse\..\..\..\.p2\pool\plugins\org.springframework.tooling.boot.ls_1.48.0.202308011907\servers\spring-boot-language-server\BOOT-INF\classes;C:\Users\Dani\eclipse\java-2023-06\eclipse\..\..\..\.p2\pool\plugins\org.springframework.tooling.boot.ls_1.48.0.202308011907\servers\spring-boot-language-server\BOOT-INF\lib\*
+-Dsts.lsp.client=eclipse
+-Dlsp.completions.indentation.enable=true
+-Xmx1024m
+-XX:+HeapDumpOnOutOfMemoryError
+-XX:TieredStopAtLevel=1
+-Xlog:jni+resolve=off
+-Dspring.config.location=file:C:\Users\Dani\eclipse\java-2023-06\eclipse\..\..\..\.p2\pool\plugins\org.springframework.tooling.boot.ls_1.48.0.202308011907\servers\spring-boot-language-server\BOOT-INF\classes\application.properties
+-XX:ErrorFile=C:/SpringBoot/.metadata/.plugins/org.springframework.tooling.boot.ls/fatal-error-spring-boot_1698142930124
+org.springframework.ide.vscode.boot.app.BootLanguageServerBootApp
+--languageserver.hover-timeout=225
+END
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-10-24 19:22:10.141
+!MESSAGE DelegatingStreamConnectionProvider - Starting Boot LS
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-10-24 19:22:10.226
+!MESSAGE Started org.springframework.tooling.boot.ls LS process 20524
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-10-24 19:22:21.689
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.eclipse.jface 2 0 2023-10-24 19:22:51.034
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-10-24 19:22:51.035
+!MESSAGE A conflict occurred for CTRL+SHIFT+C:
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.eclipse.tm4e.languageconfiguration.toggleLineCommentCommand,Toggle Line Comment,
+		,
+		Category(org.eclipse.tm4e.languageconfiguration.category,TM4E Language Configuration,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.tm4e.languageconfiguration.toggleLineCommentCommand"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.springframework.tooling.boot.ls.ToggleComment,Toggle Comment,
+		,
+		Category(org.springframework.ide.eclipse.commands,Spring Generic Text Editor,Spring Language Server Commands,true),
+		WorkbenchHandlerServiceHandler("org.springframework.tooling.boot.ls.ToggleComment"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)

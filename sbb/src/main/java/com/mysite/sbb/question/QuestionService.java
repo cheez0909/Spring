@@ -33,7 +33,12 @@ public class QuestionService {
 	public Question getQuestion(Integer id) {
 		Optional<Question> question = this.questionRepository.findById(id);
 		if(question.isPresent()) {
-			return question.get();
+			// question1 인스턴스 생성
+			Question question1 = question.get();
+			//  getView()는 디폴트값이 0이므로 1씩 증가
+			question1.setView(question1.getView()+1);
+			this.questionRepository.save(question1);
+			return question1;
 		} else {
 			throw new DataNotFoundException("question not found");
 		}

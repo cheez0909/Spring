@@ -4,6 +4,8 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Set;
 
+import org.hibernate.annotations.ColumnDefault;
+
 import com.mysite.sbb.answer.Answer;
 import com.mysite.sbb.user.SiteUser;
 
@@ -49,4 +51,8 @@ public class Question {
     
     @ManyToMany
     private Set<SiteUser> voter;
+    
+    @Column(columnDefinition = "integer default 0", nullable = false)
+    private Integer view;
+    // null은 불가능 하며 디폴트 값은 0
 }
