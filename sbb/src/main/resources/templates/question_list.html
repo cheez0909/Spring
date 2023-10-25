@@ -33,7 +33,7 @@
 				</td>
 				<td><span th:if="${questionlist.author != null}" th:text="${questionlist.author.username}"></span></td>
             	<td th:text="${#temporals.format(questionlist.createDate, 'yyyy-MM-dd HH-mm')}"></td>
-            	<td th:href="@{|/question/detail/${questionlist.id}|}" th:text="${questionlist.view}"></td>
+            	<td th:text="${questionlist.view}"></td>
         	</tr>
     	</tbody>
 	</table>

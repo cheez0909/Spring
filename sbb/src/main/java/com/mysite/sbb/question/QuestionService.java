@@ -9,20 +9,20 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
-
-import com.mysite.sbb.user.SiteUser;
-
-import lombok.RequiredArgsConstructor;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.mysite.sbb.answer.Answer;
+import com.mysite.sbb.user.SiteUser;
+
 import jakarta.persistence.criteria.CriteriaBuilder;
 import jakarta.persistence.criteria.CriteriaQuery;
 import jakarta.persistence.criteria.Join;
 import jakarta.persistence.criteria.JoinType;
 import jakarta.persistence.criteria.Predicate;
 import jakarta.persistence.criteria.Root;
-import org.springframework.data.jpa.domain.Specification;
+import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
 @Service
@@ -36,13 +36,18 @@ public class QuestionService {
 			// question1 인스턴스 생성
 			Question question1 = question.get();
 			//  getView()는 디폴트값이 0이므로 1씩 증가
+			if(question1.getView()!=null) {
 			question1.setView(question1.getView()+1);
+			} else {
+				question1.setView(1);
+			}
 			this.questionRepository.save(question1);
-			return question1;
+			return question.get();
 		} else {
 			throw new DataNotFoundException("question not found");
 		}
 	}
+	
 	public void create(String subject, String content, SiteUser author) {
 		Question q = new Question();
 		q.setSubject(subject);
@@ -52,6 +57,7 @@ public class QuestionService {
 		this.questionRepository.save(q);
 	}
 
+	 
 	// 검색어를 의미하는 kw 매개변수에 추가 
 	public Page<Question> getList(int page, String kw){
 		List<Sort.Order> sorts = new ArrayList<>();

@@ -52,7 +52,7 @@ public class Question {
     @ManyToMany
     private Set<SiteUser> voter;
     
-    @Column(columnDefinition = "integer default 0", nullable = false)
+    @Column(columnDefinition = "integer default 0")
     private Integer view;
     // null은 불가능 하며 디폴트 값은 0
 }
