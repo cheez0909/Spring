@@ -35,14 +35,9 @@ public class QuestionService {
 		if(question.isPresent()) {
 			// question1 인스턴스 생성
 			Question question1 = question.get();
-			//  getView()는 디폴트값이 0이므로 1씩 증가
-			if(question1.getView()!=null) {
 			question1.setView(question1.getView()+1);
-			} else {
-				question1.setView(1);
-			}
 			this.questionRepository.save(question1);
-			return question.get();
+			return question1;
 		} else {
 			throw new DataNotFoundException("question not found");
 		}
